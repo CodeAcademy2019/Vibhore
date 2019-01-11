@@ -1,7 +1,12 @@
-var factorial = () => {
+var factorial = (n) => {
 
-
-
-};
-
-module.exports = factorial;
+    if (n<=1)
+        return 1;
+    else {
+        return n * factorial(n-1);
+    }
+    
+    };
+    
+    module.exports = factorial;
+    

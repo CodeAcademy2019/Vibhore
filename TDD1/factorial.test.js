@@ -1,6 +1,6 @@
-let factorial = require('./string.js');
+const factorial = require('./factorial.js');
 
 
 test ('factorial should return some value',() => {
-    expect(4).toBe(24);
+    expect(factorial(4)).toBe(24);
 });
