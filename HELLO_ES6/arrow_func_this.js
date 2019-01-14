@@ -1,4 +1,13 @@
 
+// var foot = {
+//     kick: function () {
+//         this.yelp = "Ouch!";
+//         setImmediate(() => console.log(this.yelp));
+//     }
+// };
+// foot.kick();
+
+const this_func=()=>{
 var foot = {
     kick: function () {
         this.yelp = "Ouch!";
@@ -6,3 +15,4 @@ var foot = {
     }
 };
 foot.kick();
+};

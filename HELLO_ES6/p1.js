@@ -1,1 +1,5 @@
-console.log("HELLO ES6");
+const hello = () => {
+return "HELLO ES6";
+}
+
+module.exports=hello;
