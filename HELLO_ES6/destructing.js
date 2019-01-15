@@ -4,6 +4,10 @@
 // console.log(x);
 
 const des =(arr)=>{
+
+    if(Object.keys(arr).length===0){
+        return `Please don't pass empty object`;
+    }
     var a = arr;
     var [,name,mail] = a;
     var x = {username:name,email:mail};

@@ -4,6 +4,9 @@
 
 const temp = (msg)=> {
 
+    if (msg===""){
+        return "Please don't pass empty strings";
+    }
     var x = `Hello, ${msg}!
     Your name lowercased is \"${msg.toLowerCase()}\".`;
     return x;

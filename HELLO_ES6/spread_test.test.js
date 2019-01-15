@@ -8,5 +8,8 @@ test ('the output should be minimum',() => {
 });
 
 test ('the output should be minimum',() => {
-    expect(sp(b)).toBe(`The minimum of [${a}] is -120`);
+    expect(sp(b)).toBe(`The minimum of [${b}] is -120`);
+});
+test ('error message is thrown if empty array is passed',() => {
+    expect(sp([])).toBe(`Please don't pass empty array`);
 });
