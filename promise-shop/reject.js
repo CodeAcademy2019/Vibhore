@@ -1,17 +1,41 @@
-var promise = new Promise( (resolve, reject)=> {
-    // Your solution here
-    setTimeout(()=>{
-        reject(new Error("REJECTED!"));
-    },300);
-});
+// var promise = new Promise( (resolve, reject)=> {
+//     // Your solution here
+//     setTimeout(()=>{
+//         reject(new Error("REJECTED!"));
+//     },300);
+// });
     
 
-  onReject =(error) => {
-    // Your solution here
-    console.log(error.message);
-  }
+//   onReject =(error) => {
+//     // Your solution here
+//     console.log(error.message);
+//   }
 
-  promise.then('',onReject);
+//   promise.then('',onReject);
+
+
+//////////////////////////////
+
+var f1 =  (resolve, reject)=> {
+  // Your solution here
+  setTimeout(()=>{
+      reject(new Error("REJECTED!"));
+  },300);
+};
+  
+var promise = new Promise(f1);
+onReject =(error) => {
+  // Your solution here
+  console.log(error.message);
+}
+
+promise.then('',onReject);
+
+
+  module.exports = {
+    promise,
+    f1
+  };
 
 
 

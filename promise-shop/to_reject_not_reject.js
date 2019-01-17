@@ -9,6 +9,9 @@ var onRejected = (error) => {
 };
 
 promise.then(console.log,onRejected);
+//////
+
+
 
 // First, create a promise using the Promise constructor as we have been doing.
 
@@ -26,3 +29,22 @@ promise.then(console.log,onRejected);
 
 // If successful, your script should only log “I FIRED” and should not log
 // “I DID NOT FIRE”.
+
+/////////////////////////////////////////////////////////////////////////////////
+//-------------------------------TESTING CODE----------------------------------   //
+
+
+
+
+var promise = new Promise((resolve,reject) => {
+    resolve("I FIRED");
+    reject(new Error("I DID NOT FIRE"));
+});
+
+var onRejected = (error) => {
+    console.log(error.message); 
+};
+
+promise.then(console.log,onRejected);
+
+module.exports = {promise};

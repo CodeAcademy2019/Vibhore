@@ -10,7 +10,7 @@ Emsg= (error) => {
     console.log(error.message);
   }
 
-Promise.resolve(iterate(1)).then(iterate).then(iterate).then(iterate).then(iterate).then(alwaysThrows).catch(Emsg);
+module.exports = Promise.resolve(iterate(1)).then(iterate).then(iterate).then(iterate).then(iterate).then(alwaysThrows).catch(Emsg);
 // We are going to demonstrate this to ourselves by creating a chain
 // of functions that all print to the console.
 

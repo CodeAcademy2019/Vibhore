@@ -1,4 +1,30 @@
-first().then(second).then(console.log);
+// first().then(second).then(console.log);
+
+//////////   TEST CODE  ///////////////////
+
+
+
+const first= () => {
+  return Promise.resolve('Hello from first.');
+}
+const second= (x) => {
+  return Promise.resolve(x+' Hello from second.');
+}
+const a = first();
+
+const b = a.then(second);
+
+b.then(console.log);
+
+module.exports= {
+  a, b
+};
+
+
+
+
+
+
 
 /*
 Parse.User.logIn('user', 'pass').then(function (query) {
@@ -22,3 +48,30 @@ Parse.User.logIn('user', 'pass').then(function (query) {
 // by second in your onFulfilled callback.
 
 // Finally, print the fulfilled value of that new promise with console.log.
+
+
+/*
+
+
+const first=()=>{
+    return Promise.resolve('Fulfilled Successfully!');
+}
+const second=(argument)=>{
+    return Promise.resolve(argument+' This one is from second function');
+}
+const a = first();
+//console.log(a);
+
+const b=a.then((onResolveArgument) =>{
+    c=second(onResolveArgument);
+    return c;
+    
+})
+b.then(console.log)
+
+// const b= second(a);
+// return b;
+
+module.exports={a,b}
+
+*/
