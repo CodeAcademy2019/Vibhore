@@ -7,10 +7,12 @@ iterate = (x) =>{
     return x+1;
 };
 Emsg= (error) => {
-    console.log(error.message);
+    return error.message;
   }
 
-module.exports = Promise.resolve(iterate(1)).then(iterate).then(iterate).then(iterate).then(iterate).then(alwaysThrows).catch(Emsg);
+const promise = Promise.resolve(iterate(1)).then(iterate).then(iterate).then(iterate).then(iterate).then(alwaysThrows).catch(Emsg);
+
+module.exports = {alwaysThrows,promise,iterate};
 // We are going to demonstrate this to ourselves by creating a chain
 // of functions that all print to the console.
 
@@ -25,3 +27,4 @@ module.exports = Promise.resolve(iterate(1)).then(iterate).then(iterate).then(it
 // "[Error: OH NOES]".  It's important to notice that the thrown exception was
 // turned into a rejected promise which caused the rejected promise to
 // travel down the promise chain to the first available rejection handler.
+

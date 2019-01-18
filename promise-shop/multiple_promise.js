@@ -1,3 +1,9 @@
+const getPromise1 = ()=> {
+    return  Promise.resolve("Promise 1");
+}; 
+const getPromise2 = ()=> {
+    return  Promise.resolve("Promise 2");
+}; 
 
 all = (p1,p2) =>{
     return new Promise((resolve,reject)=>{
@@ -23,7 +29,11 @@ all = (p1,p2) =>{
         
 });
 };
-all(getPromise1(),getPromise2()).then(console.log);
+
+const promise = all(getPromise1(),getPromise2()).then((x)=> {console.log(x); return x;});
+module.exports = promise;
+
+
 // Let’s build this function!
 
 // Create a function all that accepts two promises as arguments. This all
