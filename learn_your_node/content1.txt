@@ -1,0 +1,5 @@
+While both are correct, mine is longer (more lines used because I declared variables at every step).
+
+I am wondering, am I wrong in declaring the variables for every step and then working on the code as I go? I mean, it does take more space, but I have the feeling that it's a bit clearer what I'm doing, unlike theirs. Or am I mistaken and haven't really gotten to that level where I can safely write everything in a one line like they did?
+
+Also am I using memory space by declaring too many variables?
