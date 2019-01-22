@@ -12,7 +12,7 @@ describe('Bowling Score Tests',()=>{
         return expect(roll(test2)).toEqual(30);
     });
     it('This test checks the score of player ',()=>{
-        return expect(roll(test3)).toEqual(60);
+        return expect(roll(test3)).toEqual(16);
     });
     
 });
