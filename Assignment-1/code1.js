@@ -1,14 +1,12 @@
-var cumm_score = 0;
-
 const roll = (arr) => {
     if(arr.length <20){
         return ("Score 0. Game not finished");
     }
-    var frame = [];
+    let frame = [];
     
-    for(var i=0;i<arr.length-2;i+=2){
-        var temp_score = 0;
-        var frameSum =  arr[i] + arr[i+1];
+    for(let i=0;i<arr.length-2;i+=2){
+        let temp_score = 0;
+        let frameSum =  arr[i] + arr[i+1];
         if(arr[i]===10){
             temp_score += 10 + arr[i+1] + arr[i+2];
             frame.push(temp_score);
