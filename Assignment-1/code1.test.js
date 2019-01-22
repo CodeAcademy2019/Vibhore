@@ -6,6 +6,7 @@ const test3 = [6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const test4 = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10];
 const test5 = [3,4,4];
 const test6 = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 10, 6];
+const test7 = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 10, 10,4];
 
 describe('Bowling Score Tests',()=>{
     it('This test checks the score of player ',()=>{
@@ -29,6 +30,9 @@ describe('Boundary test case checking',()=>{
     });
     it('This test checks the score of player who score strike at the 10th frame',()=>{
         return expect(roll(test6)).toEqual(97);
+    });
+    it('This test checks the score of player who score spare at the 10th frame',()=>{
+        return expect(roll(test7)).toEqual(105);
     });
     
 });
